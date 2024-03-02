@@ -68,3 +68,18 @@
 }
 
 
+.line {
+    height: 2px;
+    width: 20px;
+    background-color: white;
+    margin: 4px 0;
+    transition: transform 0.3s ease;
+}
+
+.cross:nth-child(1) {
+    transform: rotate(45deg);
+}
+
+.cross:nth-child(2) {
+    transform: rotate(-45deg);
+}
