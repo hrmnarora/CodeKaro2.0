@@ -1,19 +1,18 @@
 {
+  "name": "ck-fr",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npx tailwindcss -i ./src/input.css -o ./src/output.css --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
   "devDependencies": {
     "tailwindcss": "^3.4.1"
   },
-  "name": "codekaro2.0",
-  "version": "1.0.0",
-  "main": "tailwind.config.js",
-  "scripts": {
-    "build": "npx tailwindcss -i ./src/input.css -o ./src/output.css --watch"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
   "dependencies": {
-    "build": "^0.1.4",
-    "framer-motion": "^11.0.6"
+    "geist": "^1.2.2"
   }
 }

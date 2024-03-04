@@ -1,0 +1,110 @@
+@font-face {
+    font-family: 'mona';
+    src: url('./fonts/mona-sans.woff2') format('woff');
+    font-weight: 400; /* Normal */
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'mona';
+    src: url('./fonts/mona-sans.woff2') format('woff');
+    font-weight: 500; /* Normal */
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'mona';
+    src: url('./fonts/mona-sans.woff2') format('woff');
+    font-weight: 600; /* Normal */
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'mona';
+    src: url('./fonts/mona-sans.woff2') format('woff');
+    font-weight: 700; /* Normal */
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'mona';
+    src: url('./fonts/mona-sans.woff2') format('woff');
+    font-weight: 800; /* Normal */
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'mona';
+    src: url('./fonts/mona-sans.woff2') format('woff');
+    font-weight: 900; /* Normal */
+    font-style: normal;
+  }
+
+#mobileMenu {
+    max-height: 0;
+    overflow: hidden;
+}
+
+#mobileMenu.show {
+    max-height: 800px;
+}
+
+
+.navLinks {
+    position: relative;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.navLinks::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 1px;
+    background-color: white;
+    transition: width 0.3s ease-in-out;
+}
+
+.navLinks:hover::after {
+    width: 100%;
+}
+
+
+/* home */
+
+/* #HomeSection::before {
+    --line: hsl(0 0% 95% / 0.15);
+    --size: 60px;
+    content: "";
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    background: linear-gradient(var(--line) 1px, transparent 1px var(--size)) 50% 50% / var(--size) var(--size),
+        linear-gradient(90deg, var(--line) 1px, transparent 1px var(--size)) 50% 50% / var(--size) var(--size);
+    mask: linear-gradient(-180deg, transparent 30%, white);
+    top: -45px;
+    transform-style: flat;
+    pointer-events: none;
+    z-index: 1;
+} */
+
+
+.gradient-circle {
+    background: conic-gradient(from 0deg at 50% 50%, #50207e 0%, #50207e 100%);
+    width: 70vw;
+    height: 70vw;
+    border-radius: 50%;
+    position: absolute;
+    filter: blur(100px);
+    opacity: 20%;
+    z-index: 1; 
+    top: 40vh;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+.gradient-circle2 {
+    background: conic-gradient(from 0deg at 50% 50%, #50207e 0%, #50207e 100%);
+    border-radius: 50%;
+    position: absolute;
+    filter: blur(100px);
+    opacity: 20%;
+    z-index: 1; 
+}

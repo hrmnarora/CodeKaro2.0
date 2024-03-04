@@ -1,0 +1,379 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>CodeKaro</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./output.css" rel="stylesheet">
+    <link rel="stylesheet" href="../src/public/css/style.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+</head>
+
+<body class="font-mona  relative overflow-x-hidden">
+    <div class="gradient-circle absolute"></div>
+
+    <!-- Navbar -->
+    <nav id="navbar" class="bg-[#060617] p-4 shadow-md w-[1100]">
+        <div class="container mx-auto  flex justify-between items-center">
+            <div class="flex gap-4 items-center justify-center">
+                <!-- logo -->
+                <div class="text-white text-xl font-bold">CodeKaro</div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden text-white ml-10 md:flex gap-4">
+                    <a class="navLinks" href="#" class="relative decoration-none cursor-pointer">Home</a>
+                    <a class="navLinks" href="#" class="relative decoration-none cursor-pointer">About</a>
+                    <a class="navLinks" href="#" class="relative decoration-none cursor-pointer">Contact</a>
+                </div>
+            </div>
+
+
+            <!-- Register/Login Buttons -->
+            <div class="hidden md:flex space-x-4">
+                <button class="text-white   px-3 py-1 rounded">Login</button>
+                <button class="bg-transparent border border-white text-white  px-3 py-1 rounded">Register</button>
+            </div>
+
+            <!-- Mobile Navigation Toggle -->
+            <div class="md:hidden">
+                <button id="mobileToggle" class="text-white">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Navigation Menu -->
+    <div id="mobileMenu"
+        class="md:hidden w-full h-full absolute top-[61px] right-0 flex flex-col bg-[#181622] bg-opacity-40 backdrop-blur-lg text-white z-20 space-y-4">
+        <div class="mobileNavLinks flex flex-col p-4">
+
+            <!-- Menu Items -->
+            <div
+                class="menu-item w-full py-3 px-4 hover:bg-white hover:text-zinc-900  hover:transition-all text-white  rounded-sm ">
+                <a href="#" class="text-lg font-semibold  hover:text-white hover:transition-all">Courses</a>
+            </div>
+            <div
+                class="menu-item py-3 px-4 hover:bg-white hover:text-zinc-900  hover:transition-all text-white  rounded-sm ">
+                <a href="#" class="text-lg font-semibold  hover:text-white hover:transition-all">About</a>
+            </div>
+            <div
+                class="menu-item py-3 px-4 hover:bg-white hover:text-zinc-900  hover:transition-all text-white  rounded-sm ">
+                <a href="#" class="text-lg font-semibold  hover:text-white hover:transition-all">New Launch</a>
+            </div>
+            
+
+        </div>
+    </div>
+
+    <!-- Home Section -->
+
+    <div id="HomeSection"
+        class="bg-gradient-to-t relative items-center justify-center text-white flex-col  from-[#000008] to-[#060617] flex w-full">
+
+        <!-- Home Intro -->
+
+        <div class="h-[calc(100vh-61px)] flex items-center justify-center flex-col">
+            <div class="headin md:w-[60vw] w-[90vw]   z-10">
+                <h1 class="text-6xl md:text-7xl text-center  font-extrabold tracking-tight ">Start coding <span
+                        class=" leading-tight bg-gradient-to-r from-white via-[#9372FF] to-[#4B69FF] text-transparent bg-clip-text">instantly</span>
+                    with Codekaro</h1>
+            </div>
+            <div class="w-[80%]  z-10">
+                <p class="mt-6 mb-0 text-zinc-500 text-center text-xl">
+                    Social Learning and expert-led programs to start, transition or boost your career
+                </p>
+            </div>
+            <div class="flex gap-4 flex-col md:flex-row mt-16 items-center justify-center">
+                <button
+                    class="z-10 w-fit  rounded-md  h-14 border flex items-center px-8 text-xl bg-white text-zinc-900">
+                    <div class="font-medium">Start Learning for free</div>
+                </button>
+                <button
+                    class="z-10 w-fit  rounded-md  h-14 text-white flex items-center px-8 text-xl border-white border-[1px] ">
+                    <div class="font-medium">Start Learning for free</div>
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- Home Courses -->
+
+
+        <div class="courses z-10 w-[100vw] mb-24 flex items-center flex-col   h-fit">
+
+            <div class="heading w-[90%] text-4xl md:text-5xl py-10  ">
+                <h1 class="text-5xl md:text-6xl font-extrabold text-center">industry relevent
+                    <span
+                        class=" leading-tight bg-gradient-to-r from-white via-[#9372FF] to-[#4B69FF] text-transparent bg-clip-text">programs</span><br>to
+                    set you apart
+                </h1>
+                <p class="text-center text-xl font-bold mt-3 text-zinc-500 ">Lorem ipsum dolor sit amet consectetur
+                    adipisicing elit. Excepturi, aperiam.</p>
+            </div>
+
+            <!-- Home Courses cards -->
+
+            <div
+                class=" w-[70%] mt-8 md:w-[60%] border-[#1e1827] p-10 bg-[#181622] bg-opacity-70 rounded-xl flex flex-col items-center md:flex-row border-[1px] h-fit shadow-md">
+
+                <div>
+                    <h1 class="heading text-2xl font-bold">Full Stack Course</h1>
+                    <p class="description mt-4 text-gray-400 font-medium">For individual developers, freelancers,
+                        students, and educators that want to
+                        code faster and happier.</p>
+                    <div class="price mt-8">
+                        <div class="flex gap-2">
+                            <h3 class="text-2xl">$</h3>
+                            <h1 class="text-5xl font-bold text-[#9372FF]">10</h1>
+                            <h3 class="text-2xl font-medium mt-4">USD</h3>
+                        </div>
+                        <p class="text-gray-400 font-medium mt-2">per month / $100 USD per year</p>
+                    </div>
+                    <button
+                        class="z-10 w-full  rounded-md mt-6 h-14 border flex justify-center items-center px-8 text-xl bg-white text-zinc-900">
+                        <div class="font-medium">Start Learning for free</div>
+                    </button>
+                    <p class="text-gray-400 font-medium mt-4 text-sm">
+                        Free for verified students, teachers, and maintainers of popular open source projects.
+                    </p>
+                </div>
+
+                <div class="w-full md:w-[1px] md:h-[400px] bg-zinc-700 h-[1px] my-12 md:mx-12 md:my-0"></div>
+
+                <div>
+                    <h1 class="heading text-2xl font-bold">Frontent Course</h1>
+                    <p class="description mt-4 text-gray-400 font-medium">For individual developers, freelancers,
+                        students, and educators that want to
+                        code faster and happier.</p>
+                    <div class="price mt-8">
+                        <div class="flex gap-2">
+                            <h3 class="text-2xl">$</h3>
+                            <h1 class="text-5xl font-bold text-[#9372FF]">6</h1>
+                            <h3 class="text-2xl font-medium mt-4">USD</h3>
+                        </div>
+                        <p class="text-gray-400 font-medium mt-2">per month / $100 USD per year</p>
+                    </div>
+                    <button
+                        class="z-10 w-full  rounded-md mt-6 h-14 border flex justify-center items-center px-8 text-xl bg-white text-zinc-900">
+                        <div class="font-medium">Start Learning for free</div>
+                    </button>
+                    <p class="text-gray-400 font-medium mt-4 text-sm">
+                        Free for verified students, teachers, and maintainers of popular open source projects.
+                    </p>
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        <!-- problem solved section  -->
+
+        <div class="ProblemsFaced z-10 w-[100vw] mb-36 flex items-center flex-col   h-fit">
+
+
+            <div class="heading w-full text-4xl md:text-5xl py-10  ">
+                <h1 class="text-5xl md:text-6xl font-extrabold text-center">Learning
+                    <span
+                        class=" leading-tight bg-gradient-to-r from-white via-[#9372FF] to-[#4B69FF] text-transparent bg-clip-text">Problems</span><br>we
+                    have all faced
+                </h1>
+                <p class="text-center text-xl font-bold mt-3 text-zinc-500 ">Here's what 30000+ satisfied students have
+                    to say about learning with codekaro.</p>
+            </div>
+
+            <div class="flex flex-col gap-4 md:flex-row md:flex-wrap w-[80%] items-center justify-center">
+                <div
+                    class="problemCard w-fit h-fit p-3 hover:scale-[102%] transition-all cursor-pointer flex items-center  bg-[#181622] rounded-lg r">
+                    <div class="circle p-3 bg-[#0f0d15] flex items-center justify-center rounded-full">
+                        <h1 class="text-2xl">😔</h1>
+                    </div>
+                    <h1 class="text-xl mx-5 font-medium">No Practical/Hands on Experiance</h1>
+                </div>
+                <div
+                    class="problemCard hover:scale-[102%] transition-all cursor-pointer w-fit h-fit p-3 shadow-lg flex items-center bg-[#181622] rounded-lg ">
+                    <div class="circle p-3 bg-[#0f0d15] flex items-center justify-center rounded-full">
+                        <h1 class="text-2xl">😔</h1>
+                    </div>
+                    <h1 class="text-xl mx-5 font-medium">No Personal Guidance</h1>
+                </div>
+                <div
+                    class="problemCard hover:scale-[102%] transition-all cursor-pointer w-fit h-fit p-3 shadow-lg flex items-center bg-[#181622] rounded-lg ">
+                    <div class="circle p-3 bg-[#0f0d15] flex items-center justify-center rounded-full">
+                        <h1 class="text-2xl">😔</h1>
+                    </div>
+                    <h1 class="text-xl mx-5 font-medium">No Practical on Experiance</h1>
+                </div>
+                <div
+                    class="problemCard hover:scale-[102%] transition-all cursor-pointer w-fit h-fit p-3 shadow-lg flex items-center bg-[#181622] rounded-lg ">
+                    <div class="circle p-3 bg-[#0f0d15] flex items-center justify-center rounded-full">
+                        <h1 class="text-2xl">😔</h1>
+                    </div>
+                    <h1 class="text-xl mx-5 font-medium">Hard to get across the finish Line</h1>
+                </div>
+                <div
+                    class="problemCard hover:scale-[102%] transition-all cursor-pointer w-fit h-fit p-3 shadow-lg flex items-center  bg-[#181622] rounded-lg ">
+                    <div class="circle p-3 bg-[#0f0d15] flex items-center justify-center rounded-full">
+                        <h1 class="text-2xl">😔</h1>
+                    </div>
+                    <h1 class="text-xl mx-5 font-medium">No Practical/Hands on Experiance</h1>
+                </div>
+                <div
+                    class="problemCard hover:scale-[102%] transition-all cursor-pointer w-fit h-fit p-3 shadow-lg flex items-center bg-[#181622] rounded-lg ">
+                    <div class="circle p-3 bg-[#0f0d15] flex items-center justify-center rounded-full">
+                        <h1 class="text-2xl">😔</h1>
+                    </div>
+                    <h1 class="text-xl mx-5 font-medium">No Personal Guidance</h1>
+                </div>
+                <div
+                    class="problemCard hover:scale-[102%] transition-all cursor-pointer w-fit h-fit p-3 shadow-lg flex items-center bg-[#181622] rounded-lg ">
+                    <div class="circle p-3 bg-[#0f0d15] flex items-center justify-center rounded-full">
+                        <h1 class="text-2xl">😔</h1>
+                    </div>
+                    <h1 class="text-xl mx-5 font-medium">No Practical on Experiance</h1>
+                </div>
+                <div
+                    class="problemCard hover:scale-[102%] transition-all cursor-pointer w-fit h-fit p-3 shadow-lg flex items-center bg-[#181622] rounded-lg ">
+                    <div class="circle p-3 bg-[#0f0d15] flex items-center justify-center rounded-full">
+                        <h1 class="text-2xl">😔</h1>
+                    </div>
+                    <h1 class="text-xl mx-5 font-medium">Hard to get across the finish Line</h1>
+                </div>
+
+            </div>
+
+
+
+        </div>
+
+        <!-- Testimonial section  -->
+
+        <div class=" TestimonialSection relative w-[100vw] pb-36  h-fit text-zinc-100  flex flex-col items-center ">
+            <div class="w-[90%] flex items-center mt-24 justify-center flex-col">
+                <h1 class="text-5xl md:text-6xl font-extrabold text-center">Students Love
+                    <span
+                        class=" leading-tight bg-gradient-to-r from-white via-[#9372FF] to-[#4B69FF] text-transparent bg-clip-text">CodeKaro</span>
+                </h1>
+                <p class="text-center font-sm text-xl font-bold mt-3 text-zinc-500">Here's what 30000+ satisfied
+                    students have
+                    to say about learning with codekaro.</p>
+            </div>
+            <div
+                class="gradient-circle2 absolute bottom-[40%] md:bottom-24  w-[110vw] md:w-[50vw]  h-[110vw] md:h-[50vw]">
+            </div>
+            <div x-data="{ testimonials: [
+                {
+                    quote: 'A lot of advanced web dev topics taught at codekaro taught by ashish sir gave me an edge over my peers, and I ultimately absorbed more here than I ever did anywhere else.',
+                    reviewer: {
+                        name: 'Harman Arora',
+                        role: 'Student',
+                        image: 'url_to_image_1'
+                    }
+                },
+                {
+                    quote: 'A lot of advanced web dev topics taught at codekaro taught by ashish sir gave me an edge over my peers, and I ultimately absorbed more here than I ever did anywhere else.',
+                    reviewer: {
+                        name: 'Harman Arora',
+                        role: 'Student',
+                        image: 'url_to_image_1'
+                    }
+                },
+                {
+                    quote: 'A lot of advanced web dev topics taught at codekaro taught by ashish sir gave me an edge over my peers, and I ultimately absorbed more here than I ever did anywhere else.',
+                    reviewer: {
+                        name: 'Harman Arora',
+                        role: 'Student',
+                        image: 'url_to_image_1'
+                    }
+                },
+                {
+                    quote: 'A lot of advanced web dev topics taught at codekaro taught by ashish sir gave me an edge over my peers, and I ultimately absorbed more here than I ever did anywhere else.',
+                    reviewer: {
+                        name: 'Harman Arora',
+                        role: 'Student',
+                        image: 'url_to_image_1'
+                    }
+                },
+                {
+                    quote: 'A lot of advanced web dev topics taught at codekaro taught by ashish sir gave me an edge over my peers, and I ultimately absorbed more here than I ever did anywhere else.',
+                    reviewer: {
+                        name: 'Harman Arora',
+                        role: 'Student',
+                        image: 'url_to_image_1'
+                    }
+                },
+                
+            ] }">
+
+                <div class="testimonials mt-16 items-center justify-center flex flex-col md:flex-row flex-wrap gap-5 ">
+                    <template x-for="(testimonial, index) in testimonials" :key="index">
+                        <div
+                            class="testicard cursor-pointer z-10 hover:scale-[102%] bg-[#181622] w-[80%] md:w-[29%] bg-opacity-20 hover:border-zinc-800 transition-all border-zinc-900 border-[1px] rounded-xl p-6">
+                            <div class="text text-xl font-med text-zinc-100">
+                                <p class="leading-9" x-text="testimonial.quote"></p>
+                            </div>
+                            <div class="w-[80%] bg-gradient-to-r from-[#9372FF] to-[#4B69FF] h-[1px] mt-3"></div>
+                            <div class="reviewer mt-4 flex items-center">
+                                <div class="image w-14 h-14 bg-zinc-500 rounded-full"
+                                    :style="{ backgroundImage: testimonial.reviewer.image }"></div>
+                                <div class="name ml-3">
+                                    <h1 class="text-xl font-bold text-zinc-100" x-text="testimonial.reviewer.name"></h1>
+                                    <h3 class="text-zinc-400" x-text="testimonial.reviewer.role"></h3>
+                                </div>
+                            </div>
+                        </div>
+                    </template>
+                </div>
+            </div>
+
+
+        </div>
+
+
+
+        <!-- footer  -->
+
+
+
+        <footer class="w-full flex items-center p-5 justify-center rounded-lg shadow m-4 ">
+            <div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
+                <span class="text-sm  sm:text-center text-gray-400">© 2023 <a href="https://flowbite.com/"
+                        class="hover:underline">Flowbite™</a>. All Rights Reserved.
+                </span>
+                <ul
+                    class="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
+                    <li>
+                        <a href="#" class="hover:underline me-4 md:me-6">About</a>
+                    </li>
+                    <li>
+                        <a href="../src/pages/privacy.html" class="hover:underline me-4 md:me-6">Privacy Policy</a>
+                    </li>
+                    <li>
+                        <a href="../src/pages/terms.html" class="hover:underline me-4 md:me-6">Terms & Conditions</a>
+                    </li>
+                    <li>
+                        <a href="#" class="hover:underline">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+
+
+    </div>
+
+
+    <script src="../src/public/javascript/script.js">
+
+    </script>
+</body>
+
+</html>
